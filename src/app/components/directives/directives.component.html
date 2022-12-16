@@ -1,0 +1,19 @@
+<h1 [ngStyle]="{color:colorTS}">directives works</h1>
+<h2 [ngStyle]="{color: valid ? 'green' : 'red'}">Valide ?</h2>
+
+<h2 [ngClass]="{'text-success': valid2 == true,'text-danger': valid2 == false}">Classe</h2>
+
+<div *ngIf="valid2==true; else nonvalid">Validé</div>
+    <ng-template #nonvalid><div>Non validé hélas</div></ng-template>
+
+<div class="my-5">
+    <div *ngFor="let animal of animaux" class="border">{{animal}}</div>
+</div>    
+
+<div class="my-2">
+    <div *ngFor="let animal of animauxObjet" class="border" >Il y a {{animal.quantity}} {{animal.name}}.</div>
+</div>
+
+<div class="my-5">
+    <div *ngFor="let animal of animaux; let i=index" class="border">{{i}} - {{animal}}</div>
+</div>     

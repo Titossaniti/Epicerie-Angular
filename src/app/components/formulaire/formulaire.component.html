@@ -1,0 +1,14 @@
+<!--Pour lui donner une valeur initiale et la modifier de façon dynamique-->
+<div class="p-1">
+    <h1>{{name}}</h1>
+    <input type="text" [(ngModel)]="name"/>
+</div>
+
+<div class="p-1">
+    <form #animalForm="ngForm" (ngSubmit)="onSubmit(animalForm)">
+        <input type="text" name="animal" ngModel>
+        <input type="text" name="autre" ngModel>
+        <button type="submit">Envoyer</button>
+    </form>
+
+</div>
